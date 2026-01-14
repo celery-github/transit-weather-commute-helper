@@ -1,0 +1,1 @@
+fetchArrivals(from.stopId)
