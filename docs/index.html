@@ -1,0 +1,68 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Transit + Weather Commute Helper</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <header class="header">
+      <div>
+        <h1>Commute Helper</h1>
+        <p class="muted">TTC arrivals + rain risk (free APIs). Toggle direction with one button.</p>
+      </div>
+
+      <button id="toggleBtn" class="btn">
+        Home → Work
+      </button>
+    </header>
+
+    <main class="grid">
+      <section class="card">
+        <h2 id="routeTitle">Home → Work</h2>
+        <div class="row">
+          <div>
+            <div class="label">Stop</div>
+            <div id="stopMeta" class="value">—</div>
+          </div>
+          <div>
+            <div class="label">Last updated</div>
+            <div id="updatedAt" class="value">—</div>
+          </div>
+        </div>
+        <div id="statusPill" class="pill">Loading…</div>
+      </section>
+
+      <section class="card">
+        <h2>Next TTC arrivals</h2>
+        <div id="arrivals" class="list">
+          <div class="muted">Loading…</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Rain risk (next 2 hours)</h2>
+        <div id="weather" class="list">
+          <div class="muted">Loading…</div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Suggestion</h2>
+        <div id="suggestion" class="big">
+          Calculating…
+        </div>
+        <p class="muted">
+          MVP logic: catch the next arrival that doesn’t fall in a “high rain probability” window.
+        </p>
+      </section>
+    </main>
+
+    <footer class="footer muted">
+      Tip: If arrivals are empty, confirm your TTC stop ID.
+    </footer>
+
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

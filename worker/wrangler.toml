@@ -1,0 +1,11 @@
+name = "ttc-gtfsrt-proxy"
+main = "src/index.js"
+compatibility_date = "2026-01-13"
+
+[vars]
+# TTC GTFS-RT base feed. If TTC changes endpoints or requires query params,
+# you can update here without touching code.
+TTC_GTFSRT_FEED_URL = "https://bustime.ttc.ca/gtfsrt/TripUpdates"
+
+# Optional: if your feed requires a key/token, set it here and code will append it.
+TTC_API_KEY = ""
