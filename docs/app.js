@@ -1,1 +1,1 @@
-fetchArrivals(from.stopId)
+fetchArrivals(from.stop.type, from.stop.value)
