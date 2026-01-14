@@ -2,7 +2,7 @@
 export const CONFIG = {
   home: {
     label: "Home",
-    stopId: "0000",
+    stopId: "8761",
     lat: 43.6532,
     lon: -79.3832
   },
